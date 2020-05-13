@@ -1,0 +1,119 @@
+.wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+ul{
+    list-style: inside;
+    text-align: center;
+    padding:0;
+    margin:0;
+    width: 100%;
+}
+li{
+    display:inline-block;
+    position:relative;
+    margin:0 2rem;
+    width: 110px;
+    height: 110px;
+    background-color:#2A519C;
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 1px #212121;
+    cursor:pointer;
+    overflow: hidden;
+    transition: all .3s;
+}
+.facebook{
+    background-color:#2A519C;
+}
+.twitter{
+    background-color:#5DA8DC;
+}
+.instagram{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+.youtube{
+    background-color:#FF3700;
+}
+.linkedin{
+    background-color:#007BB6;
+}
+li i{
+    display: block;
+    font-size:3.3rem;
+    line-height: 110px !important;
+    color:white;
+    transition: all .3s;
+}
+.facebook:hover i{
+    transform: scale(1.2);
+    color:#2A519C !important;
+}
+.twitter:hover i{
+    transform: scale(1.2);
+    color:#5DA8DC !important;
+}
+.instagram:hover i{
+  transform: scale(1.2);
+  display: block;
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  -webkit-background-clip: text;
+  color: #e6683c;
+  -webkit-text-fill-color: transparent;
+}
+.youtube:hover i{
+    transform: scale(1.2);
+    color:#FF3700 !important;
+}
+.linkedin:hover i{
+    transform: scale(1.2);
+    color:#007BB6 !important;
+}
+
+.facebook:hover{
+    border: 5px solid #2A519C;
+}
+.twitter:hover{
+    border: 5px solid #5DA8DC;
+}
+.instagram:hover{
+    border: 5px solid;
+    border-image:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    border-image-slice: 0;
+}
+.youtube:hover{
+    border: 5px solid #FF3700;
+}
+.linkedin:hover{
+    border: 5px solid #007BB6;
+}
+
+li:before{
+    content:"";
+    position:absolute;
+    height: 110%;
+    width:110%;
+    background-color:white;
+    top: 150%;
+    left: 0%;
+    transform: translate(-50%, -50%) rotate(120deg);
+    transition: all .3s;
+}
+li:hover:before{
+    animation: animation .6s forwards;
+}
+
+@keyframes animation{
+    0%{
+        top: 150%;
+        left: 0%;
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+    }
+}
